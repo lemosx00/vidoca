@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Família Maranata</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Container com a imagem em tela cheia */
+        .background-container {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('MARANATA.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centraliza o botão vertical e horizontalmente */
+        }
+
+        /* Botão grande e marrom */
+        button {
+            padding: 25px 60px;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #5D4037; /* Marrom solicitado */
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button:hover {
+            background-color: #795548;
+            transform: scale(1.1); /* Aumenta um pouco mais ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-container">
+    <button onclick="playMusic()">🎶 Ouvir louvor</button>
+</div>
+
+<audio id="louvor">
+    <source src="glorious-day.mp3.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    function playMusic() {
+        const audio = document.getElementById("louvor");
+        audio.play();
+    }
+</script>
+
+</body>
+</html>
