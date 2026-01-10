@@ -16,19 +16,38 @@
 
         /* Container com a imagem em tela cheia */
         .background-container {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('MARANATA.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('MARANATA.jpg');
             background-size: cover;
             background-position: center;
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: flex-end; /* Alinha o conteúdo na parte de baixo */
+            align-items: flex-end; /* Alinha o grupo ao fundo */
+        }
+
+        /* Grupo que segura o texto e o botão */
+        .content-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px; /* Distância final da borda da tela */
+            width: 100%;
+        }
+
+        /* Estilo da frase acima do botão */
+        .welcome-text {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px; /* Espaço entre o texto e o botão */
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 0 10px;
         }
 
         /* Botão grande e marrom */
         button {
-            margin-bottom: 50px; /* Distância da borda inferior */
-            padding: 25px 60px;
+            padding: 20px 50px;
             font-size: 24px;
             font-weight: bold;
             background-color: #5D4037; 
@@ -45,14 +64,17 @@
 
         button:hover {
             background-color: #795548;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
 <div class="background-container">
-    <button onclick="playMusic()">🎶 Ouvir louvor</button>
+    <div class="content-group">
+        <p class="welcome-text">É uma alegria ter você aqui! ❤️‍🔥</p>
+        <button onclick="playMusic()">🎶 Ouvir louvor</button>
+    </div>
 </div>
 
 <audio id="louvor">
