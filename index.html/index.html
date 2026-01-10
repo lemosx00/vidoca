@@ -22,15 +22,16 @@
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center; /* Centraliza o botão vertical e horizontalmente */
+            align-items: flex-end; /* Alinha o conteúdo na parte de baixo */
         }
 
         /* Botão grande e marrom */
         button {
+            margin-bottom: 50px; /* Distância da borda inferior */
             padding: 25px 60px;
             font-size: 24px;
             font-weight: bold;
-            background-color: #5D4037; /* Marrom solicitado */
+            background-color: #5D4037; 
             color: white;
             border: none;
             border-radius: 50px;
@@ -44,7 +45,7 @@
 
         button:hover {
             background-color: #795548;
-            transform: scale(1.1); /* Aumenta um pouco mais ao passar o mouse */
+            transform: scale(1.1);
         }
     </style>
 </head>
