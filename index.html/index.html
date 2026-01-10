@@ -14,7 +14,6 @@
             overflow: hidden;
         }
 
-        /* Container com a imagem em tela cheia */
         .background-container {
             background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('MARANATA.jpg');
             background-size: cover;
@@ -22,12 +21,12 @@
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: flex-end; /* Alinha o conteúdo na parte de baixo */
+            align-items: flex-end; /* Alinha ao fundo */
         }
 
-        /* Botão grande e marrom */
         button {
-            margin-bottom: 50px; /* Distância da borda inferior */
+            /* Deixei 10px para não ficar totalmente colado, mas você pode colocar 0 se quiser */
+            margin-bottom: 10px; 
             padding: 25px 60px;
             font-size: 24px;
             font-weight: bold;
@@ -41,11 +40,14 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            width: 90%; /* Opcional: faz o botão ficar largo em celulares */
+            max-width: 400px;
+            justify-content: center;
         }
 
         button:hover {
             background-color: #795548;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
     </style>
 </head>
